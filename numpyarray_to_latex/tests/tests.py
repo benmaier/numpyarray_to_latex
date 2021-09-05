@@ -97,6 +97,16 @@ class LatexTest(unittest.TestCase):
               )
             testtex = f.read()
 
+    def test_col_separator_error(self):
+        self.assertRaises(ValueError,
+            lambda: to_ltx(
+               D,
+               latexarraytype='Vmatrix',
+               is_row_vector=False,
+               separate_columns=[0,1],
+               )
+            )
+
 
     def test_shape(self):
         self.assertRaises(NotImplementedError, lambda:to_ltx([[[]]]))
@@ -122,3 +132,4 @@ if __name__ == "__main__": # pragma: no cover
     T.test_mark_elements()
     T.test_shape()
     T.test_conversion()
+    T.test_col_separator_error()
