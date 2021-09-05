@@ -6,7 +6,7 @@
 Format numpy arrays as LaTeX arrays. This is a fork of [array_to_latex](https://github.com/josephcslater/array_to_latex) by [@josephcslater](https://github.com/josephcslater).
 
 * repository: https://github.com/benmaier/numpyarray_to_latex/
-* documentation: http://numpyarray_to_latex.readthedocs.io/
+* documentation: http://numpyarray-to-latex.readthedocs.io/
 
 ```python
 >>> import numpy as np
@@ -43,7 +43,7 @@ So far, the package's functionality was tested on Mac OS X and CentOS only.
 
 ## Documentation
 
-The full documentation is available at [numpyarray_to_latex.readthedocs.io](http://numpyarray_to_latex.readthedocs.io).
+The full documentation is available at [numpyarray-to-latex.readthedocs.io](http://numpyarray-to-latex.readthedocs.io).
 
 ## Examples
 

@@ -8,7 +8,7 @@ Format numpy arrays as LaTeX arrays. This is a fork of
 `@josephcslater <https://github.com/josephcslater>`__.
 
 -  repository: https://github.com/benmaier/numpyarray_to_latex/
--  documentation: http://numpyarray_to_latex.readthedocs.io/
+-  documentation: http://numpyarray-to-latex.readthedocs.io/
 
 .. code:: python
 
@@ -53,7 +53,7 @@ Documentation
 -------------
 
 The full documentation is available at
-`numpyarray_to_latex.readthedocs.io <http://numpyarray_to_latex.readthedocs.io>`__.
+`numpyarray-to-latex.readthedocs.io <http://numpyarray-to-latex.readthedocs.io>`__.
 
 Examples
 --------

@@ -30,7 +30,7 @@ setup(
                  'Programming Language :: Python :: 3.10',
                  ],
     project_urls={
-        'Documentation': 'https://numpyarray_to_latex.readthedocs.io',
+        'Documentation': 'https://numpyarray-to-latex.readthedocs.io',
         'Contributing Statement': 'https://github.com/benmaier/numpyarray_to_latex/blob/master/CONTRIBUTING.md',
         'Bug Reports': 'https://github.com/benmaier/numpyarray_to_latex/issues',
         'Source': 'https://github.com/benmaier/numpyarray_to_latex/',
