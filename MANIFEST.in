@@ -3,3 +3,9 @@ include setup.py
 include README.rst
 include LICENSE
 include setup.cfg
+include tests/test_output/column_vector.tex
+include tests/test_output/imaginary.tex
+include tests/test_output/imaginary_exp.tex
+include tests/test_output/large_matrix.tex
+include tests/test_output/row_vector.tex
+include tests/test_output/Vmatrix.tex
