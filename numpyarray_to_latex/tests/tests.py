@@ -88,6 +88,15 @@ class LatexTest(unittest.TestCase):
     def test_mark_elements(self):
         self.assertRaises(ValueError,lambda: to_ltx(F,mark_elements=[1,1]))
         self.assertRaises(ValueError,lambda: to_ltx(F[0],mark_elements=[(1,1)]))
+        with open(get_data_dir() / 'Vmatrix.tex','r') as f:
+            tex = to_ltx(D,
+               latexarraytype='Vmatrix',
+               is_row_vector=False,
+               separate_rows=[0,1],
+               mark_elements=None,
+              )
+            testtex = f.read()
+
 
     def test_shape(self):
         self.assertRaises(NotImplementedError, lambda:to_ltx([[[]]]))
@@ -101,7 +110,7 @@ class LatexTest(unittest.TestCase):
             testtex = f.read()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # pragma: no cover
 
     T = LatexTest()
     T.test_large_matrix()
