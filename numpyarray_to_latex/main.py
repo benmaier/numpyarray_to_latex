@@ -95,7 +95,7 @@ def to_ltx(a,
     if mark_elements is None:
         mark_elements = []
 
-    if a.shape == 2 and len(mark_elements)>0 and not all([hasattr(mark,'__len__') for mark in mark_elements]):
+    if a.ndim == 2 and len(mark_elements)>0 and not all([hasattr(mark,'__len__') for mark in mark_elements]):
         raise ValueError("If the array is 2D, ``mark_elements`` should be 2D as well, but isn't")
 
     if len(a.shape) == 1:

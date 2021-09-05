@@ -85,6 +85,21 @@ class LatexTest(unittest.TestCase):
                   )
             testtex = f.read()
 
+    def test_mark_elements(self):
+        self.assertRaises(ValueError,lambda: to_ltx(F,mark_elements=[1,1]))
+        self.assertRaises(ValueError,lambda: to_ltx(F[0],mark_elements=[(1,1)]))
+
+    def test_shape(self):
+        self.assertRaises(NotImplementedError, lambda:to_ltx([[[]]]))
+
+    def test_conversion(self):
+        with open(get_data_dir() / 'imaginary_exp.tex','r') as f:
+            tex = to_ltx(F,
+                   mark_elements=np.array([(0,1)]),
+                   fmt='{:4.2e}',
+                  )
+            testtex = f.read()
+
 
 if __name__ == "__main__":
 
@@ -95,3 +110,6 @@ if __name__ == "__main__":
     T.test_Vmatrix()
     T.test_imaginary()
     T.test_imaginary_exp()
+    T.test_mark_elements()
+    T.test_shape()
+    T.test_conversion()
