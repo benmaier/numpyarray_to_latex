@@ -9,9 +9,6 @@ import numpyarray_to_latex
 import inspect
 from pathlib import Path
 
-import vaccontrib
-
-
 def get_package_root():
     """Get the path of the package repository."""
     package_path = Path(inspect.getfile(numpyarray_to_latex))
