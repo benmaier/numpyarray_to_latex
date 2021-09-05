@@ -47,5 +47,3 @@ __pycache__/
 
 # Virtualenv
 venv/*
-
-/docs/
