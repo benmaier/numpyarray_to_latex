@@ -32,7 +32,7 @@ def to_ltx(a,
     latexarraytype : str, default = 'array'
         Any of
 
-        ..code ::
+        .. code:: python
 
             "array"
             "pmatrix"
@@ -80,7 +80,7 @@ def to_ltx(a,
     >>> tex = to_ltx([[2.,2.],[2.,2.]])
     >>> print(tex)
     \left(
-    \begin{array}
+    \begin{array}{}
         2.00 &    2.00\\
         2.00 &    2.00
     \end{array}
@@ -137,7 +137,7 @@ def to_ltx(a,
 
         colstr += '}'
     else:
-        colstr = ''
+        colstr = '{}'
 
     out += r'\begin{' + latexarraytype + '}' +colstr+'\n'
 

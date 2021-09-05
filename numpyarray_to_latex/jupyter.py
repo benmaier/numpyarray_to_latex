@@ -30,7 +30,7 @@ def to_jup(a,
     latexarraytype : str, default = 'array'
         Any of
 
-        ..code ::
+        .. code:: python
 
             "array"
             "pmatrix"
@@ -90,5 +90,6 @@ def to_jup(a,
                separate_columns=separate_columns,
                separate_rows=separate_rows,
             )
-    tex = '\\require{color}\n' + tex
+    if len(mark_elements) > 0:
+        tex = '\\require{color}\n' + tex
     display(Math(tex))
