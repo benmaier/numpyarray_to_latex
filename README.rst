@@ -16,12 +16,12 @@ Format numpy arrays as LaTeX arrays. This is a fork of
    >>> from numpyarray_to_latex import to_ltx
    >>> tex = to_ltx(np.random.randn(2,2))
    >>> print(tex)
-   \left(
-   \begin{array}
-     2.0156 & -0.3230\\
+   \\left(
+   \\begin{array}
+     2.0156 & -0.3230\\\\
      0.0477 &  0.0184
-   \end{array}
-   \right)
+   \\end{array}
+   \\right)
 
 Install
 -------
@@ -72,12 +72,12 @@ Default Python
 
 .. code::
 
-   \left(
-   \begin{array}
-     2.0156 & -0.3230\\
+   \\left(
+   \\begin{array}
+     2.0156 & -0.3230\\\\
      0.0477 &  0.0184
-   \end{array}
-   \right)
+   \\end{array}
+   \\right)
 
 .. code:: python
 
@@ -92,13 +92,13 @@ Default Python
 
 .. code::
 
-   \left(
-   \begin{array}{c|c}
-     0.3498 &  0.4393\\
-     \hline
-    -0.8521 & \colorbox{yellow}{$-0.6412$}
-   \end{array}
-   \right]
+   \\left(
+   \\begin{array}{c|c}
+     0.3498 &  0.4393\\\\
+     \\hline
+    -0.8521 & \\colorbox{yellow}{$-0.6412$}
+   \\end{array}
+   \\right]
 
 In Jupyter Notebooks
 ~~~~~~~~~~~~~~~~~~~~
@@ -114,7 +114,7 @@ In Jupyter Notebooks
           separate_rows=[0,1],
          )
 
-.. image:: img/01.png
+.. image:: https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/01.png
    :alt: 01
 
 .. code:: python
@@ -125,7 +125,7 @@ In Jupyter Notebooks
           separate_rows=[0,1],
          )
 
-.. image:: img/02.png
+.. image:: https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/02.png
    :alt: 02
 
 .. code:: python
@@ -139,7 +139,7 @@ In Jupyter Notebooks
           brackets='(]',
          )
 
-.. image:: img/03.png
+.. image:: https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/03.png
    :alt: 03
 
 .. code:: python
@@ -150,7 +150,7 @@ In Jupyter Notebooks
           separate_rows=[0,1],
          )
 
-.. image:: img/04.png
+.. image:: https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/04.png
    :alt: 04
 
 .. code:: python
@@ -159,7 +159,7 @@ In Jupyter Notebooks
           mark_elements=[(0,1)],
          )
 
-.. image:: img/05.png
+.. image:: https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/05.png
    :alt: 05
 
 .. code:: python
@@ -169,7 +169,7 @@ In Jupyter Notebooks
           fmt='{:4.2e}',
          )
 
-.. image:: img/06.png
+.. image:: https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/06.png
    :alt: 06
 
 Changelog

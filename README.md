@@ -13,12 +13,12 @@ Format numpy arrays as LaTeX arrays. This is a fork of [array_to_latex](https://
 >>> from numpyarray_to_latex import to_ltx
 >>> tex = to_ltx(np.random.randn(2,2))
 >>> print(tex)
-\left(
-\begin{array}
-  2.0156 & -0.3230\\
+\\left(
+\\begin{array}
+  2.0156 & -0.3230\\\\
   0.0477 &  0.0184
-\end{array}
-\right)
+\\end{array}
+\\right)
 ```
 
 ## Install
@@ -59,12 +59,12 @@ print(tex)
 ```
 
 ```math
-\left(
-\begin{array}
-  2.0156 & -0.3230\\
+\\left(
+\\begin{array}
+  2.0156 & -0.3230\\\\
   0.0477 &  0.0184
-\end{array}
-\right)
+\\end{array}
+\\right)
 ```
 
 
@@ -80,13 +80,13 @@ print(to_ltx(np.random.randn(2,2),
 ```
 
 ```math
-\left(
-\begin{array}{c|c}
-  0.3498 &  0.4393\\
-  \hline
- -0.8521 & \colorbox{yellow}{$-0.6412$}
-\end{array}
-\right]
+\\left(
+\\begin{array}{c|c}
+  0.3498 &  0.4393\\\\
+  \\hline
+ -0.8521 & \\colorbox{yellow}{$-0.6412$}
+\\end{array}
+\\right]
 ```
 
 
@@ -103,7 +103,7 @@ to_jup(np.random.randn(10,10),
       )
 ```
 
-![01](img/01.png)
+![01](https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/01.png)
 
 
 
@@ -116,7 +116,7 @@ to_jup(np.random.randn(2),
 ```
 
 
-![02](img/02.png)
+![02](https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/02.png)
 
 
 
@@ -132,7 +132,7 @@ to_jup(np.random.randn(2),
 ```
 
 
-![03](img/03.png)
+![03](https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/03.png)
 
 
 
@@ -145,7 +145,7 @@ to_jup(np.random.randn(2,2),
 ```
 
 
-![04](img/04.png)
+![04](https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/04.png)
 
 
 ```python
@@ -155,7 +155,7 @@ to_jup(np.random.randn(2,2)+1j*np.random.randn(2,2),
 ```
 
 
-![05](img/05.png)
+![05](https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/05.png)
 
 
 
@@ -166,7 +166,7 @@ to_jup(np.random.randn(2,2)+1j*np.random.randn(2,2),
       )
 ```
 
-![06](img/06.png)
+![06](https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/06.png)
 
 
 ## Changelog
