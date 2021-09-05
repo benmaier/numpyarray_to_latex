@@ -95,6 +95,9 @@ def to_ltx(a,
     if mark_elements is None:
         mark_elements = []
 
+    if a.shape == 2 and len(mark_elements)>0 and not all([hasattr(mark,'__len__') for mark in mark_elements]):
+        raise ValueError("If the array is 2D, ``mark_elements`` should be 2D as well, but isn't")
+
     if len(a.shape) == 1:
         if len(mark_elements)>0 and hasattr(mark_elements[0],'__len__'):
             raise ValueError("If the array is 1D, ``mark_elements`` should be 1D as well, but isn't.")
@@ -108,6 +111,7 @@ def to_ltx(a,
     if isinstance(mark_elements, np.ndarray):
         mark_elements = mark_elements.tolist()
         mark_elements = [ tuple(row) for row in mark_elements ]
+
 
     nrow, ncol = a.shape
 
