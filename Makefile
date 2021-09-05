@@ -1,6 +1,6 @@
 PKG=numpyarray_to_latex
-PYTHON=python
-PIP=pip
+PYTHON=python3
+PIP=pip3
 
 default: 
 	make ${PYTHON}
@@ -37,8 +37,10 @@ upload:
 
 readme:
 	pandoc --from markdown_github --to rst README.md > _README.rst
-	sed -e "s/^\:\:/\.\. code\:\: bash/g" _README.rst > README.rst
+	sed -e "s/^\:\:/\.\. code\:\: bash/g" _README.rst > __README.rst
+	sed -e "s/\.\. code\:\: math/\.\. code\:\:/g" __README.rst > README.rst
 	rm _README.rst
+	rm __README.rst
 	rstcheck README.rst
 	cd docs; ${PYTHON} make_about.py
 

@@ -70,7 +70,7 @@ Default Python
    tex = to_ltx(np.random.randn(2,2))
    print(tex)
 
-.. code:: math
+.. code::
 
    \left(
    \begin{array}
@@ -90,7 +90,7 @@ Default Python
           separate_columns=[0,1],
           separate_rows=[0,1],))
 
-.. code:: math
+.. code::
 
    \left(
    \begin{array}{c|c}
