@@ -13,7 +13,7 @@ setup(
     author_email=__email__,
     url='https://github.com/benmaier/numpyarray_to_latex',
     license=__license__,
-    description="A short description of the package.",
+    description="Format numpy arrays as LaTeX arrays.",
     long_description='',
     packages=setuptools.find_packages(),
     python_requires='>=3.6',
@@ -26,6 +26,8 @@ setup(
                  'Programming Language :: Python :: 3.6',
                  'Programming Language :: Python :: 3.7',
                  'Programming Language :: Python :: 3.8',
+                 'Programming Language :: Python :: 3.9',
+                 'Programming Language :: Python :: 3.10',
                  ],
     project_urls={
         'Documentation': 'http://numpyarray_to_latex.benmaier.org',
