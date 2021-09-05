@@ -1,3 +1,6 @@
+numpyarray_to_latex
+===================
+
 |CircleCI|
 
 Format numpy arrays as LaTeX arrays. This is a fork of

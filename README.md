@@ -1,3 +1,6 @@
+# numpyarray\_to\_latex
+
+
 [![CircleCI](https://circleci.com/gh/benmaier/numpyarray_to_latex.svg?style=svg)](https://circleci.com/gh/benmaier/numpyarray_to_latex)
 
 Format numpy arrays as LaTeX arrays. This is a fork of [array_to_latex](https://github.com/josephcslater/array_to_latex) by [@josephcslater](https://github.com/josephcslater).
