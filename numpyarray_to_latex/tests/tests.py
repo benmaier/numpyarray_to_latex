@@ -39,6 +39,7 @@ class LatexTest(unittest.TestCase):
                separate_rows=[0,1],
               )
             testtex = f.read()
+        assert(tex == testtex)
 
     def test_row_vector(self):
         with open(get_data_dir() / 'row_vector.tex','r') as f:
@@ -48,6 +49,7 @@ class LatexTest(unittest.TestCase):
                    separate_rows=[0,1],
                   )
             testtex = f.read()
+        assert(tex == testtex)
 
     def test_column_vector(self):
         with open(get_data_dir() / 'column_vector.tex','r') as f:
@@ -60,6 +62,7 @@ class LatexTest(unittest.TestCase):
                brackets='(]',
               )
             testtex = f.read()
+        assert(tex == testtex)
 
     def test_Vmatrix(self):
         with open(get_data_dir() / 'Vmatrix.tex','r') as f:
@@ -69,6 +72,7 @@ class LatexTest(unittest.TestCase):
                separate_rows=[0,1],
               )
             testtex = f.read()
+        assert(tex == testtex)
 
     def test_imaginary(self):
         with open(get_data_dir() / 'imaginary.tex','r') as f:
@@ -76,6 +80,7 @@ class LatexTest(unittest.TestCase):
                    mark_elements=[(0,1)],
               )
             testtex = f.read()
+        assert(tex == testtex)
 
     def test_imaginary_exp(self):
         with open(get_data_dir() / 'imaginary_exp.tex','r') as f:
@@ -84,6 +89,7 @@ class LatexTest(unittest.TestCase):
                    fmt='{:4.2e}',
                   )
             testtex = f.read()
+        assert(tex == testtex)
 
     def test_mark_elements(self):
         self.assertRaises(ValueError,lambda: to_ltx(F,mark_elements=[1,1]))
@@ -96,6 +102,7 @@ class LatexTest(unittest.TestCase):
                mark_elements=None,
               )
             testtex = f.read()
+        assert(tex == testtex)
 
     def test_col_separator_error(self):
         self.assertRaises(ValueError,
@@ -118,6 +125,7 @@ class LatexTest(unittest.TestCase):
                    fmt='{:4.2e}',
                   )
             testtex = f.read()
+        assert(tex == testtex)
 
 
 if __name__ == "__main__": # pragma: no cover
