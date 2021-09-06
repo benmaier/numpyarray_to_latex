@@ -118,11 +118,11 @@ def to_ltx(a,
     out = ''
 
     if brackets is not None and latexarraytype not in [
-            "bmatrix",
-            "pmatrix",
-            "vmatrix",
-            "Bmatrix",
-            "Vmatrix",
+                "bmatrix",
+                "pmatrix",
+                "vmatrix",
+                "Bmatrix",
+                "Vmatrix",
             ]:
         out = r'\left' + brackets[0] + '\n'
 
@@ -160,9 +160,11 @@ def to_ltx(a,
             if np.iscomplexobj(a[i, j]):
                 real = math_form(fmt.format(np.real(a[i, j])),
                                  mathform=mathform)
+                real = real.lstrip(' ')
                 imag = math_form(fmt.format(np.imag(a[i, j])),
                                  is_imaginary=True,
                                  mathform=mathform)
+                imag = imag.lstrip(' ')
                 if not (imag.startswith('-') or imag.startswith('+')):
                     number = real + '+' + imag
                 else:
@@ -191,22 +193,22 @@ def to_ltx(a,
 
             out += this_element
 
-
         if i < nrow-1:
             out = out + '\\\\\n'
 
         if i in separate_rows:
             out += '  \\hline\n'
 
-    out = out.rstrip('  \\hline\n')
+    if out.endswith('  \\hline\n'):
+        out = out.rstrip('  \\hline\n')
     out = out + '\n' + r'\end{' + latexarraytype + '}'
 
     if brackets is not None and latexarraytype not in [
-            "bmatrix",
-            "pmatrix",
-            "vmatrix",
-            "Bmatrix",
-            "Vmatrix",
+                "bmatrix",
+                "pmatrix",
+                "vmatrix",
+                "Bmatrix",
+                "Vmatrix",
             ]:
         out += '\n\\right' + brackets[1]
 

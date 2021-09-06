@@ -17,6 +17,8 @@ def to_jup(a,
            mark_color='pink',
            separate_columns=[],
            separate_rows=[],
+           prefix='',
+           suffix='',
            ):
     r"""
     Display a LaTeX-formatted numpy array in a Jupyter notebook.
@@ -66,6 +68,10 @@ def to_jup(a,
     separate_rows : list, default = []
         list of row indices after which a horizontal
         line should be drawn
+    prefix : str, default = ''
+        What to prepend to the array
+    suffix : str, default = ''
+        What to append to the array
 
     Returns
     -------
@@ -92,4 +98,4 @@ def to_jup(a,
             )
     if len(mark_elements) > 0:
         tex = '\\require{color}\n' + tex
-    display(Math(tex))
+    display(Math(prefix+tex+suffix))
