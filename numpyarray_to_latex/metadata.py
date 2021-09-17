@@ -3,7 +3,7 @@ Contains metainformation about this package.
 """
 
 # Note- version must also be set in setup.py
-__version__ = '0.0.3'
+__version__ = '0.1.0'
 __author__ = u'Joseph C. Slater and Benjamin F. Maier'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2021 Benjamin F. Maier, original codebase 2018 Joseph C. Slater'

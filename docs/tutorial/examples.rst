@@ -28,8 +28,8 @@ Pure Python
            mark_color='yellow',
            mark_elements=[(1,1)],
            brackets='(]',
-           separate_columns=[0,1],
-           separate_rows=[0,1],))
+           separate_columns=[1,2],
+           separate_rows=[1,2],))
 
 
 .. parsed-literal::
@@ -52,8 +52,8 @@ Jupyter Notebooks
 
     to_jup(np.random.randn(10,10),
            mark_elements=[(1,1),(2,3),(7,0)],
-           separate_columns=[0,1],
-           separate_rows=[0,1],
+           separate_columns=[1,2],
+           separate_rows=[1,2],
           )
 
 
@@ -83,8 +83,8 @@ Jupyter Notebooks
 
     to_jup(np.random.randn(2),
            mark_elements=[1,],
-           separate_columns=[0,1],
-           separate_rows=[0,1],
+           separate_columns=[1,2],
+           separate_rows=[1,2],
           )
 
 
@@ -104,8 +104,8 @@ Jupyter Notebooks
     to_jup(np.random.randn(2),
            is_row_vector=False,
            mark_elements=[1,],
-           separate_columns=[0,1],
-           separate_rows=[0,1],
+           separate_columns=[1,2],
+           separate_rows=[1,2],
            mark_color='yellow',
            brackets='(]',
           )
@@ -129,7 +129,7 @@ Jupyter Notebooks
     to_jup(np.random.randn(2,2),
            latexarraytype='Vmatrix',
            is_row_vector=False,
-           separate_rows=[0,1],
+           separate_rows=[1],
           )
 
 

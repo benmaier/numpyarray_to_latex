@@ -75,8 +75,8 @@ print(to_ltx(np.random.randn(2,2),
        mark_color='yellow',
        mark_elements=[(1,1)], 
        brackets='(]',
-       separate_columns=[0,1],
-       separate_rows=[0,1],))
+       separate_columns=[1,2],
+       separate_rows=[1,2],))
 ```
 
 ```math
@@ -98,8 +98,8 @@ from numpyarray_to_latex.jupyter import to_jup
 
 to_jup(np.random.randn(10,10),
        mark_elements=[(1,1),(2,3),(7,0)],
-       separate_columns=[0,1],
-       separate_rows=[0,1],
+       separate_columns=[1,2], # columns & rows that don't exist will be ignored
+       separate_rows=[1,2],
       )
 ```
 
@@ -110,8 +110,8 @@ to_jup(np.random.randn(10,10),
 ```python
 to_jup(np.random.randn(2),
        mark_elements=[1,],
-       separate_columns=[0,1],
-       separate_rows=[0,1],
+       separate_columns=[1,2],
+       separate_rows=[1,2],
       )
 ```
 
@@ -124,8 +124,8 @@ to_jup(np.random.randn(2),
 to_jup(np.random.randn(2),
        is_row_vector=False,
        mark_elements=[1,],
-       separate_columns=[0,1],
-       separate_rows=[0,1],
+       separate_columns=[1,2],
+       separate_rows=[1,2,3,4], # columns that don't exist will be ignored
        mark_color='yellow',
        brackets='(]',
       )
@@ -140,7 +140,7 @@ to_jup(np.random.randn(2),
 to_jup(np.random.randn(2,2),
        latexarraytype='Vmatrix',
        is_row_vector=False,
-       separate_rows=[0,1],
+       separate_rows=[1],
       )
 ```
 

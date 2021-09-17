@@ -35,8 +35,8 @@ class LatexTest(unittest.TestCase):
         with open(get_data_dir() / 'large_matrix.tex','r') as f:
             tex = to_ltx(A,
                mark_elements=[(1,1),(2,3),(7,0)],
-               separate_columns=[0,1],
-               separate_rows=[0,1],
+               separate_columns=[1,2],
+               separate_rows=[1,2],
               )
             testtex = f.read()
         assert(tex == testtex)
@@ -45,8 +45,8 @@ class LatexTest(unittest.TestCase):
         with open(get_data_dir() / 'row_vector.tex','r') as f:
             tex = to_ltx(D,
                    mark_elements=[1,],
-                   separate_columns=[0,1],
-                   separate_rows=[0,1],
+                   separate_columns=[1,2],
+                   separate_rows=[1,2],
                   )
             testtex = f.read()
         assert(tex == testtex)
@@ -56,8 +56,8 @@ class LatexTest(unittest.TestCase):
             tex = to_ltx(D,
                is_row_vector=False,
                mark_elements=[1,],
-               separate_columns=[0,1],
-               separate_rows=[0,1],
+               separate_columns=[1,2],
+               separate_rows=[1,2],
                mark_color='yellow',
                brackets='(]',
               )
@@ -69,7 +69,7 @@ class LatexTest(unittest.TestCase):
             tex = to_ltx(D,
                latexarraytype='Vmatrix',
                is_row_vector=False,
-               separate_rows=[0,1],
+               separate_rows=[1,2],
               )
             testtex = f.read()
         assert(tex == testtex)
@@ -98,7 +98,7 @@ class LatexTest(unittest.TestCase):
             tex = to_ltx(D,
                latexarraytype='Vmatrix',
                is_row_vector=False,
-               separate_rows=[0,1],
+               separate_rows=[1,2],
                mark_elements=None,
               )
             testtex = f.read()
@@ -110,7 +110,7 @@ class LatexTest(unittest.TestCase):
                D,
                latexarraytype='Vmatrix',
                is_row_vector=False,
-               separate_columns=[0,1],
+               separate_columns=[1,2],
                )
             )
 

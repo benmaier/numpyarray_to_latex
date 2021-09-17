@@ -16,12 +16,12 @@ Format numpy arrays as LaTeX arrays. This is a fork of
    >>> from numpyarray_to_latex import to_ltx
    >>> tex = to_ltx(np.random.randn(2,2))
    >>> print(tex)
-   \\left(
-   \\begin{array}
-     2.0156 & -0.3230\\\\
+   \left(
+   \begin{array}
+     2.0156 & -0.3230\\
      0.0477 &  0.0184
-   \\end{array}
-   \\right)
+   \end{array}
+   \right)
 
 Install
 -------
@@ -72,12 +72,12 @@ Default Python
 
 .. code::
 
-   \\left(
-   \\begin{array}
-     2.0156 & -0.3230\\\\
+   \left(
+   \begin{array}
+     2.0156 & -0.3230\\
      0.0477 &  0.0184
-   \\end{array}
-   \\right)
+   \end{array}
+   \right)
 
 .. code:: python
 
@@ -87,18 +87,18 @@ Default Python
           mark_color='yellow',
           mark_elements=[(1,1)], 
           brackets='(]',
-          separate_columns=[0,1],
-          separate_rows=[0,1],))
+          separate_columns=[1,2],
+          separate_rows=[1,2],))
 
 .. code::
 
-   \\left(
-   \\begin{array}{c|c}
-     0.3498 &  0.4393\\\\
-     \\hline
-    -0.8521 & \\colorbox{yellow}{$-0.6412$}
-   \\end{array}
-   \\right]
+   \left(
+   \begin{array}{c|c}
+     0.3498 &  0.4393\\
+     \hline
+    -0.8521 & \colorbox{yellow}{$-0.6412$}
+   \end{array}
+   \right]
 
 In Jupyter Notebooks
 ~~~~~~~~~~~~~~~~~~~~
@@ -110,8 +110,8 @@ In Jupyter Notebooks
 
    to_jup(np.random.randn(10,10),
           mark_elements=[(1,1),(2,3),(7,0)],
-          separate_columns=[0,1],
-          separate_rows=[0,1],
+          separate_columns=[1,2], # columns & rows that don't exist will be ignored
+          separate_rows=[1,2],
          )
 
 .. image:: https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/01.png
@@ -121,8 +121,8 @@ In Jupyter Notebooks
 
    to_jup(np.random.randn(2),
           mark_elements=[1,],
-          separate_columns=[0,1],
-          separate_rows=[0,1],
+          separate_columns=[1,2],
+          separate_rows=[1,2],
          )
 
 .. image:: https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/02.png
@@ -133,8 +133,8 @@ In Jupyter Notebooks
    to_jup(np.random.randn(2),
           is_row_vector=False,
           mark_elements=[1,],
-          separate_columns=[0,1],
-          separate_rows=[0,1],
+          separate_columns=[1,2],
+          separate_rows=[1,2,3,4], # columns that don't exist will be ignored
           mark_color='yellow',
           brackets='(]',
          )
@@ -147,7 +147,7 @@ In Jupyter Notebooks
    to_jup(np.random.randn(2,2),
           latexarraytype='Vmatrix',
           is_row_vector=False,
-          separate_rows=[0,1],
+          separate_rows=[1],
          )
 
 .. image:: https://raw.githubusercontent.com/benmaier/numpyarray_to_latex/main/img/04.png

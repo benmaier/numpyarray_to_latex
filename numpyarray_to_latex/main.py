@@ -63,10 +63,10 @@ def to_ltx(a,
     mark_color : str, default = 'pink'
         The color with which to mark matrix elements.
     separate_columns : list, default = []
-        list of column indices after which a vertical
+        list of column indices before which a vertical
         line should be drawn
     separate_rows : list, default = []
-        list of row indices after which a horizontal
+        list of row indices before which a horizontal
         line should be drawn
 
     Returns
@@ -134,10 +134,10 @@ def to_ltx(a,
         colstr = '{'
 
         for i in range(ncol):
-            colstr += 'c'
-            if i in separate_columns and i < ncol-1:
+            if i in separate_columns and i > 0:
 
                 colstr += '|'
+            colstr += 'c'
 
         colstr += '}'
     else:
@@ -146,7 +146,12 @@ def to_ltx(a,
     out += r'\begin{' + latexarraytype + '}' +colstr+'\n'
 
     for i in np.arange(nrow):
+
+        if i in separate_rows and i > 0:
+            out += '  \\hline\n'
+
         out = out + ' '
+
         for j in np.arange(ncol):
             this_element = ''
             if np.real(a[i, j]) < 0:
@@ -196,11 +201,6 @@ def to_ltx(a,
         if i < nrow-1:
             out = out + '\\\\\n'
 
-        if i in separate_rows:
-            out += '  \\hline\n'
-
-    if out.endswith('  \\hline\n'):
-        out = out.rstrip('  \\hline\n')
     out = out + '\n' + r'\end{' + latexarraytype + '}'
 
     if brackets is not None and latexarraytype not in [

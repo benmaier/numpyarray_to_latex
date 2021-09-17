@@ -25,16 +25,16 @@ G = B + 1j * C
 with open('test_output/large_matrix.tex','w') as f:
     tex = to_ltx(A,
        mark_elements=[(1,1),(2,3),(7,0)],
-       separate_columns=[0,1],
-       separate_rows=[0,1],
+       separate_columns=[1,2],
+       separate_rows=[1,2],
       )
     f.write(tex)
 
 with open('test_output/row_vector.tex','w') as f:
     tex = to_ltx(D,
            mark_elements=[1,],
-           separate_columns=[0,1],
-           separate_rows=[0,1],
+           separate_columns=[1,2],
+           separate_rows=[1,2],
           )
     f.write(tex)
 
@@ -42,8 +42,8 @@ with open('test_output/column_vector.tex','w') as f:
     tex = to_ltx(D,
        is_row_vector=False,
        mark_elements=[1,],
-       separate_columns=[0,1],
-       separate_rows=[0,1],
+       separate_columns=[1,2],
+       separate_rows=[1,2],
        mark_color='yellow',
        brackets='(]',
       )
@@ -54,7 +54,7 @@ with open('test_output/Vmatrix.tex','w') as f:
     tex = to_ltx(D,
        latexarraytype='Vmatrix',
        is_row_vector=False,
-       separate_rows=[0,1],
+       separate_rows=[1,2],
       )
     f.write(tex)
 
