@@ -50,7 +50,7 @@ def to_ltx(a,
         If the array is 1D, should the output be
         a row (True) or column (False) vector?
     mathform : bool, default = True
-        wether to convert strings like ``1e+05``
+        whether to convert strings like ``1e+05``
         to ``1\times10^{5}``.
     brackets : iterable, default = '()'
         which brackets to use to wrap the matrix
